@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(135deg, #4b6cb7, #182848); /* Gradient background */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h1 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+li:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Light gray */
+}
+
+li:nth-child(odd) {
+    background-color: #fff;
+    /* White */
+}
+
+li {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allows text to wrap onto multiple lines */
+}
+
+.task-text {
+    flex-grow: 1;
+    font-size: 18px;
+    margin-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 70%;
+    /* Adjust the maximum width as needed */
+    /* Add a tooltip to display the full text upon hovering */
+    position: relative;
+}
+
+.task-text:hover::before {
+    /* Tooltip styling */
+    content: attr(data-title);
+    position: absolute;
+    white-space: normal;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    top: -30px;
+    /* Adjust the tooltip position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.task-text:hover::before {
+    /* Show the tooltip on hover */
+    opacity: 1;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 10px;
+    /* Increase right margin for spacing */
+}
+
+.delete-button {
+    background-color: #dd1b1b;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button:hover {
+    background-color: #a21414;
+}
