@@ -12,6 +12,7 @@ body {
     /* Add blur effect to the background */
     backdrop-filter: blur(10px); /* Adjust the blur strength as needed */
 }
+
 .container {
     width: 400px;
     background-color: #fff;
