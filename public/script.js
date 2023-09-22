@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const taskList = document.getElementById('task-list');
     let tasks = [];
 
-    // Function to render tasks
+
     function renderTasks() {
         taskList.innerHTML = '';
         tasks.forEach(function (task, index) {
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
         addEditListeners();
     }
 
-    // Function to save tasks to local storage
+
     function saveTasksToLocalStorage() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
-    // Function to retrieve tasks from local storage
+
     function getTasksFromLocalStorage() {
         const storedTasks = localStorage.getItem('tasks');
         if (storedTasks) {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Event listener for form submission
+
     taskForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const taskText = taskInput.value.trim();
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Function to add event listeners to Edit and Delete buttons
+
     function addEditListeners() {
         const editButtons = document.querySelectorAll('.edit-button');
         const deleteButtons = document.querySelectorAll('.delete-button');
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Initial rendering
+
     getTasksFromLocalStorage();
-    // renderTasks();
+
 });

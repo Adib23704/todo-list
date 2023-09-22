@@ -1,7 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(135deg, #4b6cb7, #182848); /* Gradient background */
-    color: #333; /* Text color */
+    background-image: linear-gradient(135deg, #4b6cb7, #182848);
+
+    color: #333;
+
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,8 +11,9 @@ body {
     align-items: center;
     min-height: 100vh;
 
-    /* Add blur effect to the background */
-    backdrop-filter: blur(10px); /* Adjust the blur strength as needed */
+
+    backdrop-filter: blur(10px);
+
 }
 
 .container {
@@ -76,12 +79,12 @@ ul {
 
 li:nth-child(even) {
     background-color: #f9f9f9;
-    /* Light gray */
+
 }
 
 li:nth-child(odd) {
     background-color: #fff;
-    /* White */
+
 }
 
 li {
@@ -96,7 +99,7 @@ li {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* Allows text to wrap onto multiple lines */
+
 }
 
 .task-text {
@@ -107,13 +110,13 @@ li {
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 70%;
-    /* Adjust the maximum width as needed */
-    /* Add a tooltip to display the full text upon hovering */
+
+
     position: relative;
 }
 
 .task-text:hover::before {
-    /* Tooltip styling */
+
     content: attr(data-title);
     position: absolute;
     white-space: normal;
@@ -123,7 +126,7 @@ li {
     border-radius: 4px;
     font-size: 14px;
     top: -30px;
-    /* Adjust the tooltip position as needed */
+
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -132,7 +135,7 @@ li {
 }
 
 .task-text:hover::before {
-    /* Show the tooltip on hover */
+
     opacity: 1;
 }
 
@@ -147,11 +150,11 @@ li {
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
-    /* Oval shape */
+
     cursor: pointer;
     transition: background-color 0.2s;
     margin-right: 10px;
-    /* Increase right margin for spacing */
+
 }
 
 .delete-button {
@@ -160,7 +163,7 @@ li {
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
-    /* Oval shape */
+
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -171,4 +174,31 @@ li {
 
 .delete-button:hover {
     background-color: #a21414;
+}
+
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.442);
+    padding: 3px 6px;
+    border-radius: 3px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.watermark a {
+    text-decoration: none;
+    color: #0453a9;
+}
+
+
+.watermark:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-50%) scale(1.18);
 }
